@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_alignParentStart="true"
+    android:background="@color/primary"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.profile.ProfileFragment">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@color/rim"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/img_user"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/user" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="40dp"
+            android:layout_toEndOf="@+id/img_user"
+            android:text="Xuân Cường"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/rank"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_toEndOf="@id/img_user"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="8dp"
+                android:text="Hạng thành viên"
+                android:textColor="@color/white"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/sliver" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rank"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@id/img_user"
+            android:text="Điểm :"
+            android:textColor="@color/white"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@drawable/button_ud"
+        android:id="@+id/button_his"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp">
+
+
+        <ImageView
+            android:id="@+id/img_his"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_his"
+            android:layout_marginTop="11dp"
+            android:layout_marginStart="11dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_his"
+            android:layout_marginStart="11dp"
+            android:text="Lịch sử đơn hàng"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bt_set"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_his"
+        android:background="@drawable/button_ud"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/img_set"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="1dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_setting"/>
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:text="Cài đặt"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_below="@id/img_set"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:layout_constraintStart_toEndOf="@id/bt_set"
+        app:layout_constraintTop_toBottomOf="@+id/button_his"
+        android:background="@drawable/button_ud"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="8dp">
+
+        <ImageView
+            android:id="@+id/img_help"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_help"/>
+        <TextView
+            android:layout_width="180dp"
+            android:layout_height="90dp"
+            android:text="Trợ giúp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:layout_below="@id/img_help"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="11dp"
+            />
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
